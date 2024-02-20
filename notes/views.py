@@ -21,6 +21,7 @@ class NoteVersionViewSet(generics.ListAPIView):
         serializer = NoteVersionSerializer(queryset, many=True)
         return Response(serializer.data)
 
+
 class UserSignup(APIView):
     permission_classes = (permissions.AllowAny,)
 
@@ -89,7 +90,6 @@ def get_update_note(request, id):
         note.content = content
         note.save()
         return Response(NoteSerializer(note).data, status=status.HTTP_200_OK)
-
 
 
 @api_view(['POST'])
