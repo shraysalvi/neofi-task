@@ -60,6 +60,24 @@ We need to add access token in `Bearer` section in Auth that make server underst
    ![Get Note](screenshot/05.png)
 
 3. **Update in Note**
-   3.1 Make a PUT request with updatted content to `http://127.0.0.1:8000/notes/{id}/`
+   3.1. Make a PUT request with updatted content to `http://127.0.0.1:8000/notes/{id}/`
    ![Update Note](screenshot/06.png)
 
+4. **Share to Users**
+   4.1. Make a POST request to `http://127.0.0.1:8000/notes/{id}/share`
+   4.2. With the essential details:
+   ```json
+   {
+      "shared_with": [1]
+   }
+   ```
+   ![Share Note](screenshot/07.png)
+
+## 2. NoteVersion
+NoteVersion intially created when Note created then it creates everytime when Note update.
+
+1. **Note Version History of Note**
+   1.1. Make a POST request at `http://127.0.0.1:8000/notes/version-history/{id}/`
+   ![Version History of Note](screenshot/08.png)
+
+I have provided postman collection to test running code.
