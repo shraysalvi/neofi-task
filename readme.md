@@ -73,7 +73,7 @@ We need to add access token in `Bearer` section in Auth that make server underst
    ```
    ![Share Note](screenshot/07.png)
 
-## 2. NoteVersion
+## 3. NoteVersion
 NoteVersion intially created when Note created then it creates everytime when Note update.
 
 1. **Note Version History of Note**
